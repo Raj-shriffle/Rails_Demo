@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+    <div class="container">    
+                <div class="jumbotron">
+                  <div class="row">
+                      <div class="col-md-4 col-xs-12 col-sm-6 col-lg-4">
+                          <img src="https://www.svgimages.com/svg-image/s5/man-passportsize-silhouette-icon-256x256.png" alt="stack photo" class="img">
+                      </div>
+                      <div class="col-md-8 col-xs-12 col-sm-6 col-lg-8">
+                          <div class="container" style="border-bottom:1px solid black">
+                            <h2><%= @user.name %></h2>
+                          </div>
+                            <hr>
+                          <ul class="container details">
+                            <li>
+                            	<p>Age:-<%= @user.age %>
+                                </p>
+                            </li>
+                            <li>
+                            	<p>Gender:-<%= @user.gender %>
+                            	</p>
+                            </li>
+                            <li>
+                            	<p>Mobile_no:-<%= @user.mobile_no %>
+                            	</p>
+                            </li>
+                            <li>
+                            	<p>Email:-<%= @user.email %>
+                            	</p>
+                            </li>
+                            <!-- <li><p><span class="glyphicon glyphicon-new-window one" style="width:50px;"></span><a href="#">www.example.com</p></a> -->
+                          </ul>
+                      </div>
+                  </div>
+   <%= link_to "logout", welcome_path(@user.id), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
+    </div>
+</body>
+</html>
